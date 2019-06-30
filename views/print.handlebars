@@ -1,0 +1,165 @@
+<div class="container border border-dark p-5">
+
+  {{#each data.GeneralInfos}}
+  <div class="row text-center">
+    <div class="col-xl-1"></div>
+    <div class="col-xl-10">
+      <h3><strong>{{name}}</strong></h3>
+      <h5><strong>{{description}}</strong></h5>
+    </div>
+  </div>
+
+  <div class="row text-center">
+    <div class="col-xl-3"></div>
+    <div class="col-xl-2">
+      <p><strong>Phone: </strong>{{phone}}</p>
+    </div>
+    <div class="col-xl-4">
+      <p><strong>Address: </strong>{{address}}</p>
+    </div>
+    <div class="col-xl-3"></div>
+  </div>
+  {{/each}}
+  <div class="row text-center">
+    <div class="col-xl-12">
+      <p><strong>E-mail: </strong>{{data.email}}</p>
+    </div>
+
+  </div>
+
+
+  <hr>
+  <div class="row mb-4">
+    <div class="col-xl-1"></div>
+    <div class="col-xl-10">
+      <h2 id="exp">Job Exprience</h2>
+    </div>
+    <div class="col-xl-1"></div>
+  </div>
+
+  <div id="printYa">
+    {{#each data.Experiences}}
+    <div class="row">
+      <div class="col-xl-1"></div>
+      <div class="col-xl-3 text-center">
+        <p id="dates">{{entryDate}}-{{leaveDate}}</p>
+      </div>
+
+      <div class="col-xl-7">
+        <p><strong>{{company}}</strong></p>
+      </div>
+      <div class="col-xl-1"></div>
+    </div>
+
+    <div class="row">
+      <div class="col-xl-1"></div>
+      <div class="col-xl-3 text-center">
+        <p>{{city}}, {{state}}</p>
+      </div>
+
+      <div class="col-xl-7">
+        <p>Title: {{jobTitle}}</p>
+      </div>
+      <div class="col-xl-1"></div>
+    </div>
+
+    <div class="row">
+      <div class="col-xl-1"></div>
+      <div class="col-xl-3">
+      </div>
+
+      <div class="col-xl-7">
+        <p>{{description}}</p>
+      </div>
+      <div class="col-xl-1"></div>
+    </div>
+
+    <div class="row">
+      <div class="col-xl-1"></div>
+      <div class="col-xl-3">
+      </div>
+
+      <div class="col-xl-7">
+        Tasks:
+        <ul>
+          {{#if task1}}<li>{{task1}}</li>{{/if}}
+          {{#if task2}}<li>{{task2}}</li>{{/if}}
+          {{#if task3}}<li>{{task3}}</li>{{/if}}
+          {{#if task4}}<li>{{task4}}</li>{{/if}}
+          {{#if task5}}<li>{{task5}}</li>{{/if}}
+        </ul>
+      </div>
+      <div class="col-xl-1"></div>
+    </div>
+    {{/each}}
+  </div>
+
+
+  <hr>
+  <div class="row mb-4">
+    <div class="col-xl-1"></div>
+    <div class="col-xl-10">
+      <h2>Academic</h2>
+    </div>
+    <div class="col-xl-1"></div>
+  </div>
+
+  {{#each data.Studies}}
+
+  <div class="row">
+    <div class="col-xl-1"></div>
+    <div class="col-xl-3 text-center">
+      <p>{{entryDateSchool}}-{{leaveDateSchool}}</p>
+    </div>
+
+    <div class="col-xl-7">
+      <p><strong>{{school}}</strong></p>
+    </div>
+    <div class="col-xl-1"></div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-xl-1"></div>
+    <div class="col-xl-3 text-center">
+      <p>{{citySchool}}, {{stateSchool}}</p>
+    </div>
+
+    <div class="col-xl-7">
+      <p>{{degree}}</p>
+    </div>
+    <div class="col-xl-1"></div>
+  </div>
+  {{/each}}
+  <hr>
+  <div class="row mb-4">
+    <div class="col-xl-1"></div>
+    <div class="col-xl-5">
+      <h2>Skills</h2>
+    </div>
+    <div class="col-xl-5">
+      <h2>Languages</h2>
+    </div>
+    <div class="col-xl-1"></div>
+  </div>
+
+  <div class="row">
+    <div class="col-xl-1"></div>
+    <div class="col-xl-5">
+      {{#each data.Skills}}
+      <p><strong>{{skillName}}</strong>: {{skillLevel}}</p>
+      {{/each}}
+    </div>
+
+    <div class="col-xl-5">
+      {{#each data.Languages}}
+      <p><strong>{{language}}</strong>: {{languageLevel}}</p>
+      {{/each}}
+    </div>
+    <div class="col-xl-1"></div>
+  </div>
+</div>
+<div class="container text-center p-5">
+  <button href="#" type="submit" id="printPDF1" class="btn btn-info">Style #1</button>
+  <button href="#" type="submit" id="printPDF2" class="btn btn-info">Style #2</button>
+</div>
