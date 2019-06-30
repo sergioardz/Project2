@@ -2,6 +2,9 @@
 
 Resume
 
+## Demo
+![ResumeBuilder](https://github.com/sergioardz/Project2/blob/master/ResumeBuilder.gif)
+
 ## How does it works?
 
 Resume is a Node - Express app that let you create resumes of high quality in an easy way.
